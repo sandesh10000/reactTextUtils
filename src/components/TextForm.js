@@ -24,6 +24,7 @@ export default function TextForm(props) {
     var text=document.getElementById("exampleFormControlTextarea1")
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
     props.showAlert("coppied to clipboard","success");
   }
   const handleExtraSpaces=()=>{
@@ -47,31 +48,31 @@ export default function TextForm(props) {
           onChange={handleonchange}
         ></textarea>
       </div>
-      <button className="btn btn-success" onClick={uppercase}>
+      <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={uppercase}>
         Convert to UpperCase
       </button>
       <span> </span>
-      <button className="btn btn-success" onClick={lowercase}>
+      <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={lowercase}>
         Convert to lowercase
       </button>
       <span> </span>
-      <button className="btn btn-success" onClick={speak}>
+      <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={speak}>
         Speak
       </button>
       <span> </span>
-      <button className="btn btn-success" onClick={handleCopy}>
+      <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={handleCopy}>
         Copy
       </button>
       <span> </span>
-      <button className="btn btn-success" onClick={handleExtraSpaces}>
+      <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={handleExtraSpaces}>
         Remove Extra White Spaces
       </button>
     </div>
     <div className="container2 my-3 mx-3" style={{color:props.mode==='dark'?'white':'black'}}>
       <h2>text summery</h2>
-      <p>{(text.length===0)?0:text.split(" ").length}Words and  {text.length}characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length}Words and  {text.length}characters</p>
       <h2>Preview</h2>
-      <p>{text.length>0?text:"Enter something to prevoes here"}</p>
+      <p>{text.length>0?text:"Enter something to preview here"}</p>
     </div>
     </>
   );
