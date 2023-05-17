@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+.blank{
+  color:red;
+}
+.form-check-input:checked {
+  background-color: green !important;
+  border-color: green !important;
+}
+.form-check-input:focus{
+  box-shadow:0 0 0 0.25rem rgba(63,195,128,.25)  !important;
+}
+.colorPallete{
+  background-color: #ef5454;
+  color: #ef5454;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+}
+.colorPallete1{
+  background-color: rgb(81, 81, 219);
+  color: rgb(81, 81, 219);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+}
+.colorPallete2{
+  background-color: blueviolet;
+  color: blueviolet;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+}
+.colorPallete3{
+  background-color: rgb(213, 42, 193);
+  color: rgb(213, 42, 193);;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+}
+.colorPalletegroup{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0px 60px 0px 0px;
+  margin-bottom: 0px;
+}
