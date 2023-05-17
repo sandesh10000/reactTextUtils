@@ -33,11 +33,7 @@ export default function Navbar(props) {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link active" href="/about">
-                  {props.about}
-                </a>
-              </li>
+              
               
             </ul>
             <ul className="colorPalletegroup">
